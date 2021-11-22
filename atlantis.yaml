@@ -1,4 +1,4 @@
 repos:
-    - id: /.*/
-      pre_workflow_hooks:
-        - run: ./prepare.sh
+  - id: /.*/
+    pre_workflow_hooks:
+      - run: ./prepare.sh
