@@ -16,4 +16,6 @@ terraform {
 
 module "hub" {
   source = "./modules/infra"
+
+  cidr = var.cidr
 }
