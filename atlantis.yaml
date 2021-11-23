@@ -11,3 +11,4 @@ workflows:
       steps:
       - apply:
           extra_args: ["-var-file", "secrets.tfvars"]
+
