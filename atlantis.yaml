@@ -1,14 +1,4 @@
 version: 3
-workflows:
-  myworkflow:
-    plan:
-      steps:
-      - init:
-          extra_args: ["-var-file", "secrets.tfvars"]
-      - plan:
-          extra_args: ["-var-file", "secrets.tfvars"]
-    apply:
-      steps:
-      - apply:
-          extra_args: ["-var-file", "secrets.tfvars"]
-
+projects:
+- dir: .
+  workflow: custom
