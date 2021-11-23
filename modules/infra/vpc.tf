@@ -9,7 +9,7 @@ module "vpc" {
   name             = "testVPC"
   cidr             = var.cidr
   azs              = ["us-east-1a","us-east-1b"]
-  private_subnets  = [ "10.199.10.199.24", "10.199.11.0/24" ]
+  private_subnets  = [ "10.199.10.0/24", "10.199.11.0/24" ]
   public_subnets   = [ "10.199.20.0/24", "10.199.21.0/24" ]
 
   enable_nat_gateway = false
