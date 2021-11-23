@@ -1,11 +1,16 @@
+variable "cidr" {
+  type        = string
+  description = "CIDR Block for VPC"
+}
+
 module "vpc" {
   source           = "terraform-aws-modules/vpc/aws"
   version          = "3.6.0"
   name             = "testVPC"
-  cidr             = "10.0.0.0/16"
-  azs              = ["us-east-1a","us-east-1b"]
-  private_subnets  = [ "10.0.10.0/24", "10.0.11.0/24" ]
-  public_subnets   = [ "10.0.20.0/24", "10.0.21.0/24" ]
+  cidr             = var.cidr
+  azs              = ["us-west-2a","us-west-2b"]
+  private_subnets  = [ "10.199.10.0/24", "10.199.11.0/24" ]
+  public_subnets   = [ "10.199.20.0/24", "10.199.21.0/24" ]
 
   enable_nat_gateway = false
 
