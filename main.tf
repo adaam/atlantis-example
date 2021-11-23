@@ -19,4 +19,3 @@ module "hub" {
 
   cidr = var.cidr
 }
-
